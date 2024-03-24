@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Guestbook</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Country</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% messages.forEach(message => { %>
+                    <tr>
+                        <td><%= message.username %></td>
+                        <td><%= message.country %></td>
+                        <td><%= message.message %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
